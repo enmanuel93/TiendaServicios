@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<ILibroService, LibrosService>();
 
 builder.Services.AddDbContext<CarritoContext>(options =>
 {
@@ -23,7 +23,7 @@ builder.Services.AddHttpClient("Libros", config =>
     config.BaseAddress = new Uri(builder.Configuration["Services:Libros"]);
 });
 
-builder.Services.AddScoped<ILibroService, LibrosService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
