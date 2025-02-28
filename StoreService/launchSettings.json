@@ -6,7 +6,8 @@
       "serviceActions": {
         "storeservice.api.author": "StartDebugging",
         "storeservice.api.book": "StartDebugging",
-        "storeservice.api.carritocompra": "StartDebugging"
+        "storeservice.api.carritocompra": "StartDebugging",
+        "storeservice.api.gateway": "StartDebugging"
       }
     }
   }

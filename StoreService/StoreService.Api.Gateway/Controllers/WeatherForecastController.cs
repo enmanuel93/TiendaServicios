@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace StoreServices.Api.Gateway.Controllers
+namespace StoreService.Api.Gateway.Controllers
 {
     [ApiController]
     [Route("[controller]")]

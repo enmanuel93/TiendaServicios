@@ -1,4 +1,4 @@
-namespace StoreServices.Api.Gateway
+namespace StoreService.Api.Gateway
 {
     public class WeatherForecast
     {
