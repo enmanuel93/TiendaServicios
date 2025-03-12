@@ -11,7 +11,7 @@
       ],
       "UpstreamPathTemplate": "/Libro",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
-      "key": "LibroTotal"
+      "Key": "LibroTotal"
     },
     {
       "DownstreamPathTemplate": "/api/LibroMaterial/{id}",
@@ -23,10 +23,13 @@
         }
       ],
       "UpstreamPathTemplate": "/Libro/{id}",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "DelegatingHandlers": [
+        "LibroHandler"
+      ]
     },
     {
-      "DownstreamPathTemplate": "/api/autor",
+      "DownstreamPathTemplate": "/api/Autor",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -35,11 +38,11 @@
         }
       ],
       "UpstreamPathTemplate": "/Autor",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT"],
-      "key": "AutorTotal"
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "Key": "AutorTotal"
     },
     {
-      "DownstreamPathTemplate": "/api/autor/{id}",
+      "DownstreamPathTemplate": "/api/Autor/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -48,10 +51,11 @@
         }
       ],
       "UpstreamPathTemplate": "/Autor/{id}",
-      "UpstreamHttpMethod": [ "GET", "DELETE"]
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "Key": "Autor"
     },
     {
-      "DownstreamPathTemplate": "/api/carritocompras",
+      "DownstreamPathTemplate": "/api/CarritoCompras",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -63,7 +67,7 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT"]
     },
     {
-      "DownstreamPathTemplate": "/api/carritocompras/{id}",
+      "DownstreamPathTemplate": "/api/CarritoCompras/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {

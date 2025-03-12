@@ -1,5 +1,8 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using StoreService.Api.Gateway.ImplementRemote;
+using StoreService.Api.Gateway.InterfaceRemote;
+using StoreService.Api.Gateway.MessageHandler;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +12,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Ocelot configuration
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 
-builder.Services.AddOcelot();
+builder.Services.AddSingleton<IAutorRemote, AutorRemote>();
+
+builder.Services.AddHttpClient("AutorService", config =>
+{
+    config.BaseAddress = new Uri(builder.Configuration["Services:Autor"]);
+});
+builder.Services.AddSingleton<IAutorRemote, AutorRemote>();
+
+
+builder.Services.AddOcelot().AddDelegatingHandler<LibroHandler>();
 
 builder.Services.AddControllers();
 

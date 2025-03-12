@@ -31,8 +31,8 @@ services:
   storeservice.api.gateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    depends_on:
-      - storeservice.api.book
+      - Services__Autor=http://storeservice.api.gateway
+
     ports:
       - "6107:80"
 

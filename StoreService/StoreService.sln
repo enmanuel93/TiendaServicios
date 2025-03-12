@@ -17,6 +17,8 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Api.Gateway", "StoreService.Api.Gateway\StoreService.Api.Gateway.csproj", "{021544A9-3657-482A-AE61-550BE063521F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.RabbitMQ.Bus", "StoreService.RabbitMQ.Bus\StoreService.RabbitMQ.Bus.csproj", "{A3A4071F-D341-8322-4B6E-16B6FB7D5B6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{021544A9-3657-482A-AE61-550BE063521F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021544A9-3657-482A-AE61-550BE063521F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021544A9-3657-482A-AE61-550BE063521F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A4071F-D341-8322-4B6E-16B6FB7D5B6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A4071F-D341-8322-4B6E-16B6FB7D5B6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A4071F-D341-8322-4B6E-16B6FB7D5B6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A4071F-D341-8322-4B6E-16B6FB7D5B6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
