@@ -2,6 +2,8 @@
 using MediatR;
 using StoreService.Api.Book.Models;
 using StoreService.Api.Book.Persistence;
+using StoreService.RabbitMQ.Bus.BusRabbit;
+using StoreService.RabbitMQ.Bus.EventoQueue;
 
 namespace StoreService.Api.Book.Application
 {
@@ -27,10 +29,12 @@ namespace StoreService.Api.Book.Application
         public class Manejador : IRequestHandler<Ejecuta>
         {
             private readonly LibreriaContext _context;
+            private readonly IRabbitEventBus _eventBus;
 
-            public Manejador(LibreriaContext context)
+            public Manejador(LibreriaContext context, IRabbitEventBus _eventBus)
             {
                 this._context = context;
+                this._eventBus = _eventBus;
             }
 
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
@@ -45,7 +49,9 @@ namespace StoreService.Api.Book.Application
                 _context.LibreriaMaterials.Add(libro);
                 var value = await _context.SaveChangesAsync();
 
-                if (value > 0) return Unit.Value;
+                await _eventBus.Publish(new EmailEventoQueue("enm.93@gmail.com", request.Titulo, "Este contenido es un ejemplo!"));
+
+                if (value > 0) return Unit.Value;                
 
                 throw new Exception("No se pudo guardar el libro!");
             }

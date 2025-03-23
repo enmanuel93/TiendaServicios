@@ -6,17 +6,12 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "6104:80"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
   storeservice.api.book:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "6105:80"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   storeservice.api.carritocompra:
     environment:
@@ -24,9 +19,6 @@ services:
       - Services__Libros=http://storeservice.api.book
     ports:
       - "6106:80"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   storeservice.api.gateway:
     environment:

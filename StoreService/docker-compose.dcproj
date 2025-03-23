@@ -15,4 +15,8 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="StoreService.RabbitMQ.Bus\StoreService.RabbitMQ.Bus.csproj" />
+    <ProjectReference Include="StoreService.Api.Author\StoreService.Api.Author.csproj" />
+  </ItemGroup>
 </Project>
