@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StoreService.Mensajeria.Email\StoreService.Mensajeria.Email.csproj" />
     <ProjectReference Include="..\StoreService.RabbitMQ.Bus\StoreService.RabbitMQ.Bus.csproj" />
   </ItemGroup>
 

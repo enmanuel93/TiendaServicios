@@ -49,7 +49,7 @@ namespace StoreService.Api.Book.Application
                 _context.LibreriaMaterials.Add(libro);
                 var value = await _context.SaveChangesAsync();
 
-                await _eventBus.Publish(new EmailEventoQueue("enm.93@gmail.com", request.Titulo, "Este contenido es un ejemplo!"));
+                await _eventBus.Publish(new EmailEventoQueue("cruzmejia9393@gmail.com", request.Titulo, "Este contenido es un ejemplo!"));
 
                 if (value > 0) return Unit.Value;                
 

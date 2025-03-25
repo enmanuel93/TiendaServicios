@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.RabbitMQ.Bus",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Api.Book", "StoreService.Api.Book\StoreService.Api.Book.csproj", "{EEA1D6BA-A76E-8A9F-D187-A13B9A02F6EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreService.Mensajeria.Email", "StoreService.Mensajeria.Email\StoreService.Mensajeria.Email.csproj", "{89903162-DF25-4580-BC36-57A1CBCB6CE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{EEA1D6BA-A76E-8A9F-D187-A13B9A02F6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEA1D6BA-A76E-8A9F-D187-A13B9A02F6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEA1D6BA-A76E-8A9F-D187-A13B9A02F6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89903162-DF25-4580-BC36-57A1CBCB6CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89903162-DF25-4580-BC36-57A1CBCB6CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89903162-DF25-4580-BC36-57A1CBCB6CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89903162-DF25-4580-BC36-57A1CBCB6CE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
